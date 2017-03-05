@@ -29,5 +29,9 @@ namespace RootedInLove.Models
         {
             return new ApplicationDbContext();
         }
+        public System.Data.Entity.DbSet<RootedInLove.Models.Product> Products { get; set; }
+        public System.Data.Entity.DbSet<RootedInLove.Models.Artist> Artists { get; set; }
+        public System.Data.Entity.DbSet<RootedInLove.Models.Presentation> Presentations { get; set; }
+        public System.Data.Entity.DbSet<RootedInLove.Models.PricingGroup> PricingGroups { get; set; }
     }
 }
