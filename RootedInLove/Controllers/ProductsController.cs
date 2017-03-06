@@ -10,29 +10,41 @@ using RootedInLove.Models;
 
 namespace RootedInLove.Controllers
 {
-    public class ProductsController : Controller
+    public class MaterialsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
         public ActionResult Index()
         {
+            ViewBag.Title = "All Materials";
             return View(db.Products.ToList());
         }
 
         // GET: Products/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Author(string id="James")
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            var authors =
+                from people in db.Artists
+                where people.ShortName == id
+                select people;
+            if (authors.Count()==0)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            var authorID = authors.First().ID;
+            var authorName = authors.First().FullName;
+
+            var product = 
+                from item in db.Products
+                where item.Author.ID == authorID
+                select item;
+            if (product.Count()==0)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.Title = "Materials from "+authorName;
+            return View("Index",product.ToList());
         }
 
         // GET: Products/Create

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<RootedInLove.Models.Product>
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4" style="height:600px">
+            <hr />
+            <p>
+                <img src="@Html.DisplayFor(modelItem => item.Image)" class="img-responsive" style="text-align: center; margin-left: auto; margin-right: auto;" />
+                <br />
+                <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                <br />
+                @Html.DisplayFor(modelItem => item.Author.FullName)
+                
+            </p>
+
+        </div>
+    }
+</div>
