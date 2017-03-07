@@ -14,7 +14,9 @@
         <br />
         <h3>@Html.DisplayFor(modelItem => Model.Title)</h3>
         <br />
-        @Html.DisplayFor(modelItem => Model.Author.FullName)
-
+        @Html.DisplayFor(modelItem => Model.category.Name) by @Html.DisplayFor(modelItem => Model.Author.FullName)
+        <br /><br />
+        @Html.DisplayFor(modelItem => Model.Description)
+       
     </p>
 </div>

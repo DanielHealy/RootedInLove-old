@@ -11,7 +11,7 @@ namespace RootedInLove.Models
         public int ID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public PricingGroup category { get; set; }
+        public virtual PricingGroup category { get; set; }
         public string Image { get; set; }
         public string AddToCartLink { get; set; }
         public string GooglePlayLink { get; set; }
