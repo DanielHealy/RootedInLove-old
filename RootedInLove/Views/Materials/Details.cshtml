@@ -9,58 +9,12 @@
 <div>
     <h4>Product</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+    <p>
+        <img src="@Html.DisplayFor(modelItem => Model.Image)" class="img-responsive" style="text-align: center; margin-left: auto; margin-right: auto; max-height:400px" />
+        <br />
+        <h3>@Html.DisplayFor(modelItem => Model.Title)</h3>
+        <br />
+        @Html.DisplayFor(modelItem => Model.Author.FullName)
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AddToCartLink)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AddToCartLink)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GooglePlayLink)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GooglePlayLink)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShortName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShortName)
-        </dd>
-
-    </dl>
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
