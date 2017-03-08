@@ -17,6 +17,12 @@
         @Html.DisplayFor(modelItem => Model.category.Name) by @Html.DisplayFor(modelItem => Model.Author.FullName)
         <br /><br />
         @Html.DisplayFor(modelItem => Model.Description)
-       
     </p>
+    <form action="@Html.DisplayFor(modelItem => Model.AddToCartLink)" method="POST" target="ejejcsingle">
+        <input type="hidden" name="on0" value="Title">
+        <select hidden name="os0">
+            <option value="@Html.DisplayFor(modelItem => Model.Title)"></option>
+        </select>
+        <input type="submit" value="Add to Cart" class="btn btn-default">
+    </form>
 </div>
