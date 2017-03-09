@@ -36,6 +36,13 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor:pointer">Materials<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Materials by Dr. James Healy", "Author", "Materials", new { id = "James" },null)</li>
+                            <li>@Html.ActionLink("Materials by Dr. Madonna Wojtaszek-Healy", "Author", "Materials", new { id = "Madonna" }, null)
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 
