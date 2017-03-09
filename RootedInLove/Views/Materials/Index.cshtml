@@ -9,9 +9,12 @@
         <div class="col-md-4" style="height:650px">
             <hr />
             <p>
-                <img src="@Html.DisplayFor(modelItem => item.Image)" class="img-responsive" style="text-align: center; margin-left: auto; margin-right: auto; max-height:400px" />
+                <a href='@Url.Action("Details", "Materials", new { id = item.ShortName },null)'>    
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" class="img-responsive" style="text-align: center; margin-left: auto; margin-right: auto; max-height:400px" />
+                </a>
                 <br />
-                <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+               
+                <h3>@Html.ActionLink(item.Title, "Details", "Materials",new { id = item.ShortName },null)</h3>
                 <br />
                 @Html.DisplayFor(modelItem => item.category.Name) by @Html.DisplayFor(modelItem => item.Author.FullName)
                 
