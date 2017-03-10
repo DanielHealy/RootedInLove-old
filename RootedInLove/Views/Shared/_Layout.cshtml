@@ -35,7 +35,13 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor:pointer">About<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("About Dr. James Healy", "About", "Home", new { id = "James" }, null)</li>
+                            <li>@Html.ActionLink("About Dr. Madonna Wojtaszek-Healy", "About", "Home", new { id = "Madonna" }, null)
+                        </ul>
+                    </li>
                     <li>
                         <a class="dropdown-toggle" data-toggle="dropdown" style="cursor:pointer">Materials<span class="caret"></span></a>
                         <ul class="dropdown-menu">
