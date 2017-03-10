@@ -51,5 +51,13 @@ namespace RootedInLove.Controllers
             return View(material);
         }
         #endregion
+
+        #region Pricing (Pricing details and information)
+        public ActionResult Pricing()
+        {
+            ViewBag.Title = "All Materials";
+            return View(db.PricingGroups.ToList());
+        }
+        #endregion
     }
 }

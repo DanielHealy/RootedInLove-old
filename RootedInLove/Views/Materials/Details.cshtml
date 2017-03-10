@@ -24,13 +24,17 @@
             <select hidden name="os0">
                 <option value="@Html.DisplayFor(modelItem => Model.Title)"></option>
             </select>
-            <input type="submit" value="Add to Cart" class="btn btn-default">
+            <input type="submit" value="Add to Cart" class="btn btn-default"> @Html.ActionLink("Pricing and Ordering","Pricing","Materials")
         </form>
 
         @if (Model.GooglePlayLink != null)
         {
-
-            <div style="text-align:center"><a href="@Model.GooglePlayLink"><img src="~/Images/GooglePlay.png" style="max-height:75px" /></a></div>
+            <br /><br />
+            <p>
+                This item is also available digitally on Google Play
+                <br />
+                <a href="@Model.GooglePlayLink"><img src="~/Images/GooglePlay.png" style="max-height:75px" /></a>
+            </p>
         }
     
 </div>

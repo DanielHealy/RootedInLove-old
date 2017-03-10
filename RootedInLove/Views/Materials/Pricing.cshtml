@@ -1,0 +1,74 @@
+﻿@model IEnumerable<RootedInLove.Models.PricingGroup>
+@{
+    ViewBag.Title = "Pricing";
+}
+
+<h2>Pricing</h2>
+
+<div class="row">
+    <div class="container">
+        <p>All items in a category have the same price and can be combined for a bulk-order discount</p>
+        
+     </div>
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4" style="text-align:center">
+                <p>
+                    <hr />
+                    <h4>@Html.DisplayFor(modelItem => item.Name) bulk pricing:</h4>
+                    <br />
+                    @Html.DisplayFor(modelItem => item.QuantityThresholdPrice1) for 1 @Html.DisplayFor(modelItem => item.Name)
+                    @if (item.QuantityThreshold2 != null)
+                    {
+                        <br />
+                        @Html.DisplayFor(modelItem => item.QuantityThresholdPrice2) <text> each if you order </text> @Html.DisplayFor(modelItem => item.QuantityThreshold2) <text>or more @Html.DisplayFor(modelItem => item.PluralName)</text>
+                    }
+                    else
+                    {
+                        <br/>
+                        <text>No bulk order discount available</text>
+                    }
+                    @if (item.QuantityThreshold3 != null)
+                    {
+                        <br />
+                        @Html.DisplayFor(modelItem => item.QuantityThresholdPrice3) <text> each if you order </text> @Html.DisplayFor(modelItem => item.QuantityThreshold3) <text>or more @Html.DisplayFor(modelItem => item.PluralName)</text>
+                    }
+                    @if (item.QuantityThreshold4 != null)
+                    {
+                        <br />
+                        @Html.DisplayFor(modelItem => item.QuantityThresholdPrice4) <text> each if you order </text> @Html.DisplayFor(modelItem => item.QuantityThreshold4) <text>or more @Html.DisplayFor(modelItem => item.PluralName)</text>
+                    }
+                    @if (item.QuantityThreshold5 != null)
+                    {
+                        <br />
+                        @Html.DisplayFor(modelItem => item.QuantityThresholdPrice5) <text> each if you order </text> @Html.DisplayFor(modelItem => item.QuantityThreshold5) <text>or more @Html.DisplayFor(modelItem => item.PluralName)</text>
+                    }
+                    @if (item.QuantityThreshold6 != null)
+                    {
+                        <br />
+                        @Html.DisplayFor(modelItem => item.QuantityThresholdPrice6) <text> each if you order </text> @Html.DisplayFor(modelItem => item.QuantityThreshold6) <text>or more @Html.DisplayFor(modelItem => item.PluralName)</text>
+                    }
+
+
+                </p>
+                
+            </div>
+            
+        }
+    
+    </div>
+<hr />
+<div class="row">
+    <div class="container">
+        <h2>Ordering</h2>
+        <p>
+            Online checkout is available for orders made in the United States. Shopping cart service is provided by <a href="https://www.e-junkie.com/">E-Junkie</a> and payment processing is provided by <a href="https://www.paypal.com">
+            PayPal</a>. Payment can be made by credit card or by PayPal account.
+            <br />
+            <br />
+            If you would prefer to billed for your purchase, orders can be placed by phone or email. Orders placed outside the United States must be arranged by phone or by email<br /><br />
+            Illinois Parishes:<br /> Sales tax is automatically added to orders with Illinois shipping addresses during online checkout. If you are purchasing for a parish, diocese, or other tax-exempt organization in Illinois, please contact Rooted in Love following your order and we will refund your tax amount.
+        </p>
+    </div>
+</div>
+
