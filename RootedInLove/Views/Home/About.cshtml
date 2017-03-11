@@ -19,6 +19,9 @@
         <p>
             @Html.ActionLink("Materials by "+Model.FullName,"Author","Materials", new { id = Model.ShortName }, new { @class = "btn btn-default" })
         </p>
+    <p>
+        @Html.ActionLink("Presentations by " + Model.FullName, "Author", "Presentations", new { id = Model.ShortName }, new { @class = "btn btn-default" })
+    </p>
     @if (Model.GooglePlayLink != null)
     {
             <p>

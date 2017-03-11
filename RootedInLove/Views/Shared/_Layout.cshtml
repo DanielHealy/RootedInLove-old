@@ -50,6 +50,13 @@
                             <li>@Html.ActionLink("Pricing and Ordering", "Pricing","Materials")
                         </ul>
                     </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor:pointer">Presentations<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Presentations by Dr. James Healy", "Author", "Presentations", new { id = "James" }, null)</li>
+                            <li>@Html.ActionLink("Presentations by Dr. Madonna Wojtaszek-Healy", "Author", "Presentations", new { id = "Madonna" }, null)
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     
                 </ul>

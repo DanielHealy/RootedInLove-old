@@ -1,0 +1,28 @@
+﻿@model RootedInLove.Models.Presentation
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+
+
+<div>
+
+    <hr />
+    <p>
+        
+        <h3>@Html.DisplayFor(modelItem => Model.Title)</h3>
+        <br />
+        by @Html.DisplayFor(modelItem => Model.Presenter.FullName)
+        <br /><br />
+        @Html.DisplayFor(modelItem => Model.Description)
+    </p>
+
+    @if (Model.PDFDownloadLink != null)
+    {
+            <p>
+                <a href="@Model.PDFDownloadLink" class="btn btn-default" download>Download Full PDF</a>
+            </p>
+    }
+
+</div>
