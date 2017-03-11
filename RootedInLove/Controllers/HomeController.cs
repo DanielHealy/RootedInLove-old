@@ -13,9 +13,14 @@ namespace RootedInLove.Controllers
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        public ActionResult Index()
+        public ActionResult Index(string id="James")
         {
-            return View();
+            var author =
+                (from people in db.Artists
+                 where people.ShortName == id
+                 select people).First();
+
+            return View("About",author);
         }
 
         public ActionResult About(string id = "James")
