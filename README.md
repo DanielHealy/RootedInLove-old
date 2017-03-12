@@ -2,7 +2,7 @@
 
 Rooted in Love is a website advertizing materials and speakings by Dr. James Healy and Dr. Madonna Wojtaszek-Healy. 
 
-The website is currently hosted at http://rootedinlove.azurewebsites.net
+The website is currently hosted at http://www.rootedinlove.org
 
 
 Acknowledgments:
