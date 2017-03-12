@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<RootedInLove.Models.Product>
 
 <h2>@ViewBag.Title</h2>
-
+<p>Click on an item below for more details</p>
 <div class="row">
 
     @foreach (var item in Model)
     {
-        <div class="col-md-4" style="height:650px">
-            <hr />
+        <div class="col-md-4" style="height:650px;border:ridge">
+            <br />
             <p>
                 <a href='@Url.Action("Details", "Materials", new { id = item.ShortName },null)'>    
                     <img src="@Html.DisplayFor(modelItem => item.Image)" class="img-responsive" style="text-align: center; margin-left: auto; margin-right: auto; max-height:400px" />
