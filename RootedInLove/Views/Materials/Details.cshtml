@@ -24,7 +24,7 @@
             <select hidden name="os0">
                 <option value="@Html.DisplayFor(modelItem => Model.Title)"></option>
             </select>
-            <input type="submit" value="Add to Cart" class="btn btn-default"> @Html.ActionLink("Pricing and Ordering","Pricing","Materials")
+            <input type="submit" value="Add to Cart" class="btn btn-default"> <br /><br />@Html.ActionLink("Pricing and Ordering Information","Pricing","Materials", new { @class = "btn btn-default" })
         </form>
 
         @if (Model.GooglePlayLink != null)
